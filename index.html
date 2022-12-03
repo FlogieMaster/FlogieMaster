@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        left: 0;
+        line-height: 200px;
+        margin-top: -100px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 100%;
+    }
+
+    input{
+        outline: none;
+        background: black;
+        color: white;
+        width: 100%;
+        text-align: center;
+        border: none;
+        font-size: 6rem;
+    }
+</style>
+
+<script>
+    function google(){
+        console.log(searchinput.value);
+        open("https://google.com/search?q=" + searchinput.value)
+    }
+</script>
+
+<body>
+    <form onsubmit="google();">
+            <h1><input class="search" type="text" id="searchinput" autocomplete="off"></h1>
+    </form>
+</body>
+
+</html>
