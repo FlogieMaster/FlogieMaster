@@ -43,5 +43,6 @@ function settings_backgroundcolor() {
     document.querySelector('body').style.backgroundColor = color_background;
     document.querySelector('input').style.backgroundColor = color_background;
     document.querySelector('span').style.backgroundColor = color_background;
+    document.getElementById('searchinput').style.backgroundColor = color_background;
     backgroundcolorinput.value = '';
 }
