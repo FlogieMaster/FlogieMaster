@@ -22,6 +22,7 @@ function onstart() {
     document.querySelector('body').style.color = color_main;
     document.querySelector('input').style.color = color_main;
     document.querySelector('span').style.color = color_main;
+    document.getElementById('searchinput').style.backgroundColor = color_background;
 }
 
 function settings_maincolor() {
