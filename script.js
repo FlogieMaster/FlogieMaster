@@ -8,7 +8,7 @@ function google() {
         document.querySelector('body').style.color = color_main;
         document.querySelector('input').style.color = color_main;
         document.querySelector('span').style.color = color_main;
-    } if(searchinput.value == 'clock off'){
+    } if(searchinput.value == 'clock on'){
         body.innerHTML = '<div class="clock" id="clock"><span id="hrs">00</span><span> : </span><span id="min">00</span><span> : </span><span id="sec">00</span></div><form onsubmit="google();" id="maincontent"><h1><input class="search" type="text" id="searchinput" autocomplete="off"></h1></form>'
         isclock = true;
         onstart();
