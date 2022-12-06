@@ -17,8 +17,7 @@ function google() {
         isclock = false;
         onstart();
     } else {
-        console.log(searchinput.value);
-        console.log(searchinput.value);
+        console.log('you googled: ' + searchinput.value);
         open("https://google.com/search?q=" + searchinput.value)
         searchinput.value = '';
         searchinput.select();
