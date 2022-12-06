@@ -3,9 +3,7 @@ let color_background = 'rgb(0, 0, 0)'
 var isclock = false
 
 function google() {
-    if(searchinput.value.startsWith('abc')){
-        console.log("test");
-    } if (searchinput.value == 'settings') {
+    if (searchinput.value == 'settings') {
         body.innerHTML = '<div class="settings"><span class="setting-title">Settings</span><form onsubmit="settings_maincolor();  return false;" id="settings"><input class="maincolor" type="text" id="maincolorinput"autocomplete="off" placeholder="Main-Color white"></form><form onsubmit="settings_backgroundcolor(); return false;" id="settings"><input class="bkcolor" type="text" id="backgroundcolorinput" autocomplete="off"placeholder="Background-Color black"></form></div>'
         document.querySelector('body').style.color = color_main;
         document.querySelector('input').style.color = color_main;
@@ -18,7 +16,7 @@ function google() {
         body.innerHTML = '<form onsubmit="google();" id="maincontent"><h1><input class="search" type="text" id="searchinput" autocomplete="off"></h1></form>'
         isclock = false;
         onstart();
-    } else {
+    } if(searchinut != 'settings' && searchinut != 'clock on' && searchinut != 'clock off') {
         console.log(searchinput.value);
         open("https://google.com/search?q=" + searchinput.value)
         searchinput.value = '';
