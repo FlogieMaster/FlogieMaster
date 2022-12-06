@@ -18,6 +18,7 @@ function google() {
         onstart();
     } else {
         console.log(searchinput.value);
+        console.log(searchinput.value);
         open("https://google.com/search?q=" + searchinput.value)
         searchinput.value = '';
         searchinput.select();
