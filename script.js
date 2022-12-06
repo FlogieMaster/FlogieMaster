@@ -16,7 +16,7 @@ function google() {
         body.innerHTML = '<form onsubmit="google();" id="maincontent"><h1><input class="search" type="text" id="searchinput" autocomplete="off"></h1></form>'
         isclock = false;
         onstart();
-    } if(searchinut != 'settings' && searchinut != 'clock on' && searchinut != 'clock off') {
+    } else {
         console.log(searchinput.value);
         open("https://google.com/search?q=" + searchinput.value)
         searchinput.value = '';
