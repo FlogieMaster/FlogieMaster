@@ -57,7 +57,6 @@ function settings_maincolor() {
     document.querySelector('input').style.color = color_main;
     document.querySelector('span').style.color = color_main;
     maincolorinput.value = '';
-    console.log('a');
 }
 
 function settings_backgroundcolor() {
