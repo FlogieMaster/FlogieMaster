@@ -22,7 +22,7 @@ input {
     width: 99%;
     text-align: center;
     border: none;
-    font-size: 4rem;
+    font-size: 4vw;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -36,7 +36,7 @@ input {
     text-align: center;
     top: 30%;
     width: 100%;
-    font-size: 4rem;
+    font-size: 4vw;
 }
 
 .setting-title{
@@ -56,5 +56,5 @@ input {
     top: 30%;
     width: 100%;
     font-style: bold;
-    font-size: 500%;
+    font-size: 8vw;
 }
