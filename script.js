@@ -22,7 +22,15 @@ function google() {
         onstart();
     } else {
         console.log(searchinput.value);
-        open("https://google.com/search?q=" + searchinput.value)
+        if(searchinput.value.includes('.')){
+            if(searchinput.value.startsWith('https://www.')){
+                open(searchinput.value);
+            }else{
+                open("https://www." + searchinput.value);
+            }
+        }else{
+            open("https://google.com/search?q=" + searchinput.value);
+        }
         searchinput.value = '';
         searchinput.select();
     }
@@ -33,17 +41,17 @@ function onstart() {
     color_background = dictionarySettings["Backgroundcolor"];
     if (dictionarySettings["clock"] == "on") {
         body.innerHTML = '<div class="clock" id="clock"><span id="clockid">00:00:00</span></div><form onsubmit="google();" id="maincontent"><h1><input class="search" type="text" id="searchinput" autocomplete="off"></h1></form>'
+        document.getElementById('clockid').style.color = color_main;
     } else {
         body.innerHTML = '<form onsubmit="google();" id="maincontent"></form>'
     }
     maincontent.innerHTML = '<h1><input class="search" type="text" id="searchinput" autocomplete="off"></h1>';
-    searchinput.select();
     document.querySelector('body').style.color = color_main;
     document.querySelector('input').style.color = color_main;
     document.querySelector('input').style.backgroundColor = color_background;
     document.querySelector('body').style.backgroundColor = color_background;
-    document.getElementById('clockid').style.color = color_main;
     clock();
+    searchinput.select();
 }
 
 function settings_maincolor() {
@@ -87,7 +95,10 @@ function clock() {
         sec = "0" + sec;
     }
     let time = hrs + ':' + min + ':' + sec;
-    document.getElementById('clockid').innerHTML = time;
+    if (dictionarySettings["clock"] == "on"){
+        document.getElementById('clockid').innerHTML = time;
+    }
+    
 }
 
 setInterval(clock, 1000)
