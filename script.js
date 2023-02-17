@@ -23,7 +23,7 @@ function google() {
     } else {
         console.log(searchinput.value);
         if(searchinput.value.includes('.')){
-            if(searchinput.value.startsWith('https://www.')){
+            if(searchinput.value.startsWith('https://')){
                 open(searchinput.value);
             }else{
                 open("https://www." + searchinput.value);
