@@ -6,34 +6,43 @@ let dictionarySettings = JSON.parse(localStorage.getItem('dictionarySettings')) 
 
 function google() {
     if (searchinput.value == 'settings') {
-        body.innerHTML = '<div class="settings"><span class="setting-title">Settings</span><form onsubmit="settings_maincolor();  return false;" id="settings"><input class="maincolor" type="text" id="maincolorinput"autocomplete="off" placeholder="Main-Color white"></form><form onsubmit="settings_backgroundcolor(); return false;" id="settings"><input class="bkcolor" type="text" id="backgroundcolorinput" autocomplete="off"placeholder="Background-Color black"></form></div>'
-        document.querySelector('body').style.color = color_main;
+        body.innerHTML = '<div class="position"><div class="x" onclick="onstart();"><div class="x_text">X</div></div></div><div class="settings"><span class="setting-title">Settings</span><form onchange="settings_maincolor()" class="color_I"><input type="color" id="main_color_input"></form><form onchange="settings_backgroundcolor()" class="color_I"><input type="color" id="background_color_input"></form></div>'
+        document.getElementById('main_color_input').value = color_main;
+        document.getElementById('main_color_input').style.border = "6px solid";
+        document.getElementById('main_color_input').style.borderRadius = "6px";
+        document.getElementById('background_color_input').value = color_background;
+        document.getElementById('background_color_input').style.border = "6px solid";
+        document.getElementById('background_color_input').style.borderColor = color_background;
+        document.querySelector('body').style.color = color_main; 
         document.querySelector('input').style.color = color_main;
         document.querySelector('span').style.color = color_main;
         document.getElementById('backgroundcolorinput').style.backgroundColor = color_background;
     document.getElementById('maincolorinput').style.backgroundColor = color_background;
     } else if (searchinput.value == 'clock on') {
         dictionarySettings["clock"] = "on";
-        localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings))
+        localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings));
         onstart();
     } else if (searchinput.value == 'clock off') {
         dictionarySettings["clock"] = "off";
         localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings))
         onstart();
+    }else if(searchinput.value == 'color'){
+        console.log('color')
     } else {
         console.log(searchinput.value);
         if(searchinput.value.includes('.')){
-            if(searchinput.value.startsWith('https://')){
+            if(searchinput.value.startsWith('https://www.')){
                 open(searchinput.value);
             }else{
                 open("https://www." + searchinput.value);
+                
             }
         }else{
             open("https://google.com/search?q=" + searchinput.value);
         }
         searchinput.value = '';
         searchinput.select();
-    }
+    } 
 }
 
 function onstart() {
@@ -55,29 +64,22 @@ function onstart() {
 }
 
 function settings_maincolor() {
-    if (maincolorinput.value == 'esc') {
-        onstart();
-    }
-    color_main = maincolorinput.value;
-    dictionarySettings["Color"] = maincolorinput.value;
+    color_main = main_color_input.value;
+    dictionarySettings["Color"] = main_color_input.value;
     localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings))
     document.querySelector('body').style.color = color_main;
     document.querySelector('input').style.color = color_main;
     document.querySelector('span').style.color = color_main;
-    maincolorinput.value = '';
+    document.getElementById('main_color_input').style.borderColor = color_main;
 }
 
 function settings_backgroundcolor() {
-    if (backgroundcolorinput.value == 'esc') {
-        onstart();
-    }
-    color_background = backgroundcolorinput.value;
-    dictionarySettings["Backgroundcolor"] = backgroundcolorinput.value;
+    color_background = background_color_input.value;
+    dictionarySettings["Backgroundcolor"] = background_color_input.value;
     localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings))
     document.querySelector('body').style.backgroundColor = color_background;
     document.querySelector('input').style.backgroundColor = color_background;
     document.getElementById('backgroundcolorinput').style.backgroundColor = color_background;
-    backgroundcolorinput.value = '';
 }
 
 function clock() {
