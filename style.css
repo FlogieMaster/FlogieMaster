@@ -19,14 +19,14 @@ input {
     outline: none;
     background-color: black;
     color: white;
-    width: 99%;
+    width: 80%;
     text-align: center;
     border: none;
     font-size: 4vw;
     font-family: 'Nunito', sans-serif;
 }
 
-.settings{
+.settings {
     text-align: center;
     color: white;
     left: 0;
@@ -39,13 +39,13 @@ input {
     font-size: 4vw;
 }
 
-.setting-title{
+.setting-title {
     text-decoration: underline;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 4px;
 }
 
-.clock{
+.clock {
     text-align: center;
     left: 0;
     color: white;
@@ -57,4 +57,28 @@ input {
     width: 100%;
     font-style: bold;
     font-size: 6vw;
+}
+
+input[type="color"] {
+    padding: 0;
+    border: 0px solid;
+    border-radius: 5px;
+}
+
+.x {
+    background-color: grey;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.x_text {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;    
+}
+
+.position{
+    padding-left: 97%;
 }
