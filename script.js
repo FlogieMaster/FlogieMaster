@@ -11,8 +11,6 @@ function google() {
         document.getElementById('main_color_input').style.border = "6px solid";
         document.getElementById('main_color_input').style.borderRadius = "6px";
         document.getElementById('background_color_input').value = color_background;
-        document.getElementById('background_color_input').style.border = "6px solid";
-        document.getElementById('background_color_input').style.borderColor = color_background;
         document.querySelector('body').style.color = color_main; 
         document.querySelector('input').style.color = color_main;
         document.querySelector('span').style.color = color_main;

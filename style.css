@@ -21,6 +21,7 @@ input {
     color: white;
     width: 80%;
     text-align: center;
+    min-height: 50px;
     border: none;
     font-size: 4vw;
     font-family: 'Nunito', sans-serif;
@@ -81,8 +82,4 @@ input[type="color"] {
 
 .position{
     padding-left: 97%;
-}
-
-.x_text:hover{
-    text-shadow: 2px aqua;
 }
