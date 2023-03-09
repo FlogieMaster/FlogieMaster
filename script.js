@@ -29,8 +29,10 @@ function google() {
     } else {
         console.log(searchinput.value);
         if(searchinput.value.includes('.')){
-            if(searchinput.value.includes('www') || searchinput.value.includes('https')){
-                open(searchinput.value);
+            if(searchinput.value.includes('www') && searchinput.value.includes('https') == false){
+                open("https://" + searchinput.value);
+            }if(searchinput.value.includes('https')){
+                open(searchinput.value)
             }else{
                 open("https://www." + searchinput.value);
                 
