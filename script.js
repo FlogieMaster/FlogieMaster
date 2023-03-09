@@ -32,7 +32,7 @@ function google() {
             if(searchinput.value.includes('www') || searchinput.value.includes('https')){
                 open(searchinput.value);
             }else{
-                open("www." + searchinput.value);
+                open("https://www." + searchinput.value);
                 
             }
         }else{
