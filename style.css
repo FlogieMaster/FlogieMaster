@@ -1,11 +1,16 @@
+:root{
+    --maincolor: white;
+    --backgroundcolor: black;
+}
+
 body {
-    background-color: black;
+    background: var(--backgroundcolor);
     font-family: 'Nunito', sans-serif;
 }
 
 h1 {
     text-align: center;
-    color: white;
+    color: var(--maincolor);
     left: 0;
     line-height: 200px;
     margin-top: -100px;
@@ -17,8 +22,8 @@ h1 {
 
 input {
     outline: none;
-    background-color: black;
-    color: white;
+    background: var(--backgroundcolor);
+    color: var(--maincolor);
     width: 80%;
     text-align: center;
     min-height: 50px;
@@ -29,7 +34,7 @@ input {
 
 .settings {
     text-align: center;
-    color: white;
+    color: var(--maincolor);
     left: 0;
     line-height: 200px;
     margin-top: -100px;
@@ -49,7 +54,7 @@ input {
 .clock {
     text-align: center;
     left: 0;
-    color: white;
+    color: var(--maincolor);
     line-height: 200px;
     margin-top: -100px;
     position: absolute;
@@ -64,22 +69,41 @@ input[type="color"] {
     padding: 0;
     border: 0px solid;
     border-radius: 5px;
+    outline: none;
 }
 
-.x {
-    background-color: grey;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-}
-
-.x_text {
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    vertical-align: middle;    
+#main_color_input{
+    border: 6px solid;
+    border-radius: 6px;
 }
 
 .position{
-    padding-left: 97%;
+    float: right;
+    color: var(--maincolor);
+    transition: color 0.6s;
+}
+
+.position:hover{
+    color: white;
+}
+
+button{
+    color: #ccc;
+    background-color: #222;
+    border: none;
+    text-align: center;
+    font-size: 1.6rem;
+    border: 50px;
+    border-radius: 50px;
+    transition: all 0.5 s;
+    min-width: 150px;
+    min-height: 50px;
+    margin-left: 20px;
+    font-family: 'Nunito', sans-serif;
+    transition: background-color .4s, color .4s;
+}
+
+button:hover{
+    color: #222;
+    background-color: #ccc;
 }
