@@ -78,7 +78,7 @@ function clock() {
 }
 
 function checkclocksettingsexist() {
-    (dictionarySettings["clocksettings"] != null || dictionarySettings["clocksettings"].lengh() == 6) || (dictionarySettings["clocksettings"] = [0, 0, 1, 1]);
+    (dictionarySettings["clocksettings"] != null) || (dictionarySettings["clocksettings"] = [0, 0, 1, 1]);
     localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings));
 }
 
