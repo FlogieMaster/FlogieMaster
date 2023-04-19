@@ -15,8 +15,11 @@ function google() {
     } else {
         console.log(searchinput.value);
         if (searchinput.value.includes('.')) {
-            (searchinput.value.includes('www') && searchinput.value.includes('https') == false) || open("https://" + searchinput.value);
-            (searchinput.value.includes('https')) ? open(searchinput.value) : open("https://www." + searchinput.value);
+            if (searchinput.value.includes('www') || searchinput.value.includes('https://')) {
+                searchinput.value.includes('www') ? open("https://" + searchinput.value) : open(searchinput.value);
+            } else {
+                open("https://" + searchinput.value)
+            }
         } else {
             open("https://google.com/search?q=" + searchinput.value);
         }
