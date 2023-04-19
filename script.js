@@ -1,3 +1,5 @@
+"use strict";
+
 let color_main = 'rgb(255, 255, 255)'
 let color_background = 'rgb(0, 0, 0)'
 var timedublepointsmall = ':';
