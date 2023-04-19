@@ -113,6 +113,18 @@ button:hover{
     color: var(--maincolor);
 }
 
+.position{
+    float: right;
+    color: var(--maincolor);
+    margin: 20px;
+}
+
+.positionsettings{
+    float: right;
+    color: var(--maincolor);
+    margin-top: -100px;
+}
+
 input[type="color"]{
     outline: none;
     padding: 0;
