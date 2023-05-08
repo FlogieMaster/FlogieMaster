@@ -6,17 +6,16 @@ var timedublepointsmall = ':';
 var timedublepointbig = ' : ';
 let dictionarySettings = JSON.parse(localStorage.getItem('dictionarySettings')) || { "Color": "white", "Backgroundcolor": "black", "clocksettings": [0, 0, 1, 1], "target": "new" };
 var r = document.querySelector(':root');
+let websites = { "chatgpt": "https://chat.openai.com/", "poki": "https://poki.ch/", "google": "https://google.com", "youtube": "https://youtube.com", "y": "https://youtube.com", "github": "https://github.com/" };
 let clockids = ["#day", "#year", "#hour", "#second"]
 let loadclock = "false"
 
 function google() {
-    if (searchinput.value == 'settings') {
-        gotosettings()
-    } else if (searchinput.value == 'color') {
-        console.log('color')
-    } else if (searchinput.value.toLowerCase() == 'chatgpt') {
-        open('https://chat.openai.com/')
-    } else {
+    for (let element in websites) {
+        if (searchinput.value.toLowerCase() == element) {
+            open(websites[element]);
+        }
+    }
         console.log(searchinput.value);
         if (searchinput.value.includes('.')) {
             if (searchinput.value.includes('www') || searchinput.value.includes('https://')) {
@@ -29,7 +28,7 @@ function google() {
         }
         searchinput.value = '';
         searchinput.select();
-    }
+    
 }
 
 function onstart() {
