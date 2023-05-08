@@ -4,13 +4,15 @@ let color_main = 'rgb(255, 255, 255)'
 let color_background = 'rgb(0, 0, 0)'
 var timedublepointsmall = ':';
 var timedublepointbig = ' : ';
-let dictionarySettings = JSON.parse(localStorage.getItem('dictionarySettings')) || { "Color": "white", "Backgroundcolor": "black", "clocksettings": [0, 0, 1, 1], "target": "new" };
+let dictionarySettings = JSON.parse(localStorage.getItem('dictionarySettings')) || { "Color": "white", "Backgroundcolor": "black", "clocksettings": [0, 0, 1, 1], "target": "new" , "times": 0};
 var r = document.querySelector(':root');
 let websites = { "chatgpt": "https://chat.openai.com/", "poki": "https://poki.ch/", "google": "https://google.com", "youtube": "https://youtube.com", "y": "https://youtube.com", "github": "https://github.com/", "spotify": "https://open.spotify.com", "quizlet": "https://quizlet.com", "nesa": "https://kss.nesa-sg.ch/"};
 let clockids = ["#day", "#year", "#hour", "#second"]
 let loadclock = "false"
 
 function google() {
+    dictionarySettings["times"] += 1;
+    localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings))
     for (let element in websites) {
         if (searchinput.value.toLowerCase() == element) {
             open(websites[element]);
@@ -28,7 +30,6 @@ function google() {
         }
         searchinput.value = '';
         searchinput.select();
-    
 }
 
 function onstart() {
@@ -86,6 +87,7 @@ function clock() {
 function checksettingsexist() {
     (dictionarySettings["clocksettings"] != null) || (dictionarySettings["clocksettings"] = [0, 0, 1, 1]);
     (dictionarySettings["target"] != null) || (dictionarySettings["target"] = "new");
+    (dictionarySettings["times"] != null) || (dictionarySettings["times"] = 0);
     localStorage.setItem('dictionarySettings', JSON.stringify(dictionarySettings));
 }
 
