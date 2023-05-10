@@ -6,7 +6,7 @@ var timedublepointsmall = ':';
 var timedublepointbig = ' : ';
 let dictionarySettings = JSON.parse(localStorage.getItem('dictionarySettings')) || { "Color": "white", "Backgroundcolor": "black", "clocksettings": [0, 0, 1, 1], "target": "new" , "times": 0};
 var r = document.querySelector(':root');
-let websites = { "chatgpt": "https://chat.openai.com/", "poki": "https://poki.ch/", "google": "https://google.com", "youtube": "https://youtube.com", "y": "https://youtube.com", "github": "https://github.com/", "spotify": "https://open.spotify.com", "quizlet": "https://quizlet.com", "nesa": "https://kss.nesa-sg.ch/", "p": "https://www.pinterest.com/"};
+let websites = { "chatgpt": "https://chat.openai.com/", "poki": "https://poki.ch/", "google": "https://google.com", "youtube": "https://youtube.com", "y": "https://youtube.com", "github": "https://github.com/", "spotify": "https://open.spotify.com", "quizlet": "https://quizlet.com", "nesa": "https://kss.nesa-sg.ch/", "p": "https://www.pinterest.com/", "insta": "https://www.instagram.com/"};
 let clockids = ["#day", "#year", "#hour", "#second"]
 let loadclock = "false"
 
