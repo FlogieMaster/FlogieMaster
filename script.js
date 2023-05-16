@@ -6,7 +6,7 @@ var timedublepointsmall = ':';
 var timedublepointbig = ' : ';
 let dictionarySettings = JSON.parse(localStorage.getItem('dictionarySettings')) || { "Color": "white", "Backgroundcolor": "black", "clocksettings": [0, 0, 1, 1], "target": "new" , "times": 0};
 var r = document.querySelector(':root');
-let websites = { "chatgpt": "https://chat.openai.com/", "poki": "https://poki.ch/", "google": "https://google.com", "youtube": "https://youtube.com", "y": "https://youtube.com", "github": "https://github.com/", "spotify": "https://open.spotify.com", "quizlet": "https://quizlet.com", "nesa": "https://kss.nesa-sg.ch/", "p": "https://www.pinterest.com/", "insta": "https://www.instagram.com/", "bio": "https://immediate-moonflower-ecc.notion.site/Pr-fung-3-Zusammenfassung-9ebe59dd75fd45cea5da64139beacc42"};
+let websites = { "chatgpt": "https://chat.openai.com/", "poki": "https://poki.ch/", "google": "https://google.com", "youtube": "https://youtube.com", "y": "https://youtube.com", "github": "https://github.com/", "spotify": "https://open.spotify.com", "quizlet": "https://quizlet.com", "nesa": "https://kss.nesa-sg.ch/", "p": "https://www.pinterest.com/", "insta": "https://www.instagram.com/", "bio": "https://immediate-moonflower-ecc.notion.site/Pr-fung-3-Zusammenfassung-9ebe59dd75fd45cea5da64139beacc42", "schoolkss": "https://immediate-moonflower-ecc.notion.site/Schule-1e9b139e8b984767ad5afd6421567c75"};
 let clockids = ["#day", "#year", "#hour", "#second"]
 let loadclock = "false"
 
