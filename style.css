@@ -10,7 +10,8 @@ body {
 }
 
 *::selection {
-  background-color: transparent;
+  background-color: var(--maincolor);
+  color: var(--backgroundcolor);
 }
 
 h1 {
